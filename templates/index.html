@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="/static/style.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Flask Slack</title>
+
+</head>
+
+<body>
+<header>
+    <h1>Flack</h1>
+    <div id="userBox">
+        <div id="welcomeBox">
+            <div><i class="fa fa-fw fa-user"></i></div>
+            <div id="welcome"></div>
+        </div>
+        <div id="logout">Logout</div>
+    </div>
+
+</header>
+<!-- Actual layout -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- Left Side bar -->
+        <nav class="col-md-3 sidebar">
+            <h2>Channels</h2>
+            <div id="channelList" class="list-group">
+            </div>
+            <div class="mt-2 input-group mw-100">
+                <input id="channelName" class="form-control" placeholder="Add channel" autofocus/>
+                <div class="input-group-append">
+                    <button id="submitChannel" type="button" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </nav>
+        <!-- Chat contents -->
+        <main class="col-md-9" id="mainContent">
+            <div id="messagesList" class="list-group"></div>
+            <div class="input-group mt-3" id="messageInput">
+                <input id="chatInput" class="form-control" autocomplete="off" />
+                <div class="input-group-append">
+                    <button id="sendButton" type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<!-- Alert -->
+<div class="alert alert-danger fade show" id="alertBox" role="alert">
+    <p id="alertMessage"></p>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-content">
+        <h5 class="modal-title">Enter username</h5>
+        <form id="loginForm" class="inputForm modal-body">
+            <input id="displayName" type="text" name="name" autocomplete="off" autofocus placeholder="Your display name"
+                   required/>
+            <button id="submitName" type="button" class="btn btn-primary">Join</button>
+        </form>
+    </div>
+</div>
+
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+</html>

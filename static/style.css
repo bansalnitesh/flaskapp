@@ -1,0 +1,118 @@
+header {
+    display: flex !important;
+    justify-content: space-between;
+    border-bottom: 2px solid darkgrey;
+    height: 70px;
+    padding: 10px;
+}
+
+header div {
+    font-size: 20px;
+}
+
+#userBox {
+    display: flex;
+}
+
+#welcomeBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#welcomeBox div {
+    margin-right: 20px;
+    font-size: 18px !important;
+}
+
+#alertBox {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+.channel{
+    background-color: #3f0e40 !important;
+    border: none !important;
+    color: white !important;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.active {
+    background-color: #5c325c !important;
+    font-weight: bold !important;
+
+}
+button{
+    background-color: #5c325c !important;
+    border: none !important;
+}
+
+.container-fluid main {
+    height: 90vh;
+    overflow: scroll;
+}
+
+/* Styles chat boxes */
+.container-chat {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+.message{
+    border-bottom: darkgrey 2px solid;
+}
+.padd{
+    padding-left: 5px;
+}
+.display{
+    display: flex;
+    font-size: 20px !important;
+    font-weight: bold;
+    text-align: center;
+}
+.display i{
+    margin: 3px;
+}
+.time {
+    color: #999;
+}
+.sidebar{
+    background-color: #3f0e40 !important;
+    height: 90vh;
+    padding: 10px;
+    color: white !important;
+}
+/* Controls chat input  field*/
+#messageInput {
+    position: fixed;
+    bottom: 15px;
+    width: 100vw;
+}
+
+@media (min-width: 768px) {
+    #messageInput {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        width: 70vw;
+    }
+}
+
+/* Controls chat display area*/
+#messagesList {
+    padding-bottom: 10vh;
+}
+
+/* Hides scroll x in messages area */
+#mainContent {
+    overflow: auto;
+    height: 100%;
+}
