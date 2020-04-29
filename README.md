@@ -1,3 +1,3 @@
-# Project 2
+# Project flaskapp
 
-Web Programming with Python and JavaScript
+
